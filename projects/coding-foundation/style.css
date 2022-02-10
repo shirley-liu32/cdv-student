@@ -1,0 +1,16 @@
+body{
+    text-align: center;
+    background-color: black;
+    color: white;
+  }
+  #sqContainer{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+  }
+  .square{
+    margin: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+  }
