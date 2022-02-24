@@ -1,0 +1,58 @@
+[
+    {
+        "typeOfDrink": "Water",
+        "storeBrand": "Nongfu",
+        "thoughts": "Practice has made me really thirsty.",
+        "location": "Luwan Stadium",
+        "timeOfDay": 20,
+        "rating": 100
+    },
+    {
+        "typeOfDrink": "Rose Latte",
+        "storeBrand": "Meet Coffee",
+        "thoughts": "This latte has rose petals and tastes pretty good.",
+        "location": "Home",
+        "timeOfDay": 14,
+        "rating": 70
+    },
+    {
+        "typeOfDrink": "Soda",
+        "storeBrand": "Coca Cola",
+        "thoughts": "Very sweet but it came with the meal.",
+        "location": "Home",
+        "timeOfDay": 19,
+        "rating": 40
+    },
+    {
+        "typeOfDrink": "Soda",
+        "storeBrand": "Coca Cola",
+        "thoughts": "I should drink it because it was free.",
+        "location": "Home",
+        "timeOfDay": 13,
+        "rating": 50
+    },
+    {
+        "typeOfDrink": "Lemon Tea",
+        "storeBrand": "Vita",
+        "thoughts": "Taste pretty good, but a little sweet.",
+        "location": "Home",
+        "timeOfDay": 10,
+        "rating": 60
+    },
+    {
+        "typeOfDrink": "Water",
+        "storeBrand": "Nongfu",
+        "thoughts": "This water is nice and cold.",
+        "location": "School",
+        "timeOfDay": 15,
+        "rating": 70
+    },
+    {
+        "typeOfDrink": "Water",
+        "storeBrand": "Nongfu",
+        "thoughts": "I need some warm water for my throat.",
+        "location": "Home",
+        "timeOfDay": 23,
+        "rating": 95
+    }
+]
