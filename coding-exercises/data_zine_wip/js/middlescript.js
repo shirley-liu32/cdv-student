@@ -9,12 +9,31 @@ let viz = d3.select("#container")
     .style("background-color", "#FFF8E5")
 ;
 
+
+
 function gotData(incomingData){
 
     let datagroups = viz.selectAll(".datagroup").data(incomingData).enter()
       .append("g")
         .attr("class","datagroup")
     ;
+    console.log(incomingData)
+
+    function getBevColor(d, i) {
+        let bevColor;
+        if (d.beverage == "Coffee") {
+           bevColor = "#814F0A";
+        }
+        else if (d.beverage == "Water"){
+           bevColor = "#30A7D8";
+        }
+        else{
+            bevColor = "pink";
+        }
+        console.log(bevColor)
+    
+        return bevColor;
+    }
     
     let circleCup = d3.symbol()
         .type(d3.symbolCircle).size(3000);
@@ -152,7 +171,7 @@ function gotData(incomingData){
 
     datagroups.append("path")
                 .attr("d", circleLiquid)
-                .attr("fill", "#774E02")
+                .attr("fill", getBevColor)
                 .attr("transform", "translate(200,520)")
     ;
 
@@ -174,7 +193,7 @@ function gotData(incomingData){
 
     datagroups.append("path")
                 .attr("d", circleLiquid)
-                .attr("fill", "#71D0E3")
+                .attr("fill", getBevColor)
                 .attr("transform", "translate(2000,620)")
     ;
     
