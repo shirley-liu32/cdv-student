@@ -1,0 +1,98 @@
+[
+    {
+        "beverage": "Water",
+        "timeItTookToFinishDrink": 20,
+        "price": "$",
+        "date": "3/2",
+        "timeOfDay": 20,
+        "location": "Luwan Stadium"
+    },
+    {
+        "beverage": "Coffee",
+        "timeItTookToFinishDrink": 28,
+        "price": "$$",
+        "date": "3/2",
+        "timeOfDay": 13,
+        "location": "Home"
+    },
+    {
+        "beverage": "Coffee",
+        "timeItTookToFinishDrink": 13,
+        "price": "$$",
+        "date": "3/3",
+        "timeOfDay": 15,
+        "location": "School"
+    },
+    {
+        "beverage": "Milk Tea",
+        "timeItTookToFinishDrink": 10,
+        "price": "$$",
+        "date": "3/4",
+        "timeOfDay": 21,
+        "location": "Home"
+    },
+    {
+        "beverage": "Tequila Sunrise",
+        "timeItTookToFinishDrink": 40,
+        "price": "$$$",
+        "date": "3/5",
+        "timeOfDay": 14,
+        "location": "Xintiandi"
+    },
+    {
+        "beverage": "Milk Tea",
+        "timeItTookToFinishDrink": 11,
+        "price": "$$",
+        "date": "3/5",
+        "timeOfDay": 16,
+        "location": "Xintiandi"
+    },
+    {
+        "beverage": "Water",
+        "timeItTookToFinishDrink": 5,
+        "price": "$",
+        "date": "3/6",
+        "timeOfDay": 14,
+        "location": "Home"
+    },
+    {
+        "beverage": "Water",
+        "timeItTookToFinishDrink": 7,
+        "price": "$",
+        "date": "3/6",
+        "timeOfDay": 1,
+        "location": "Home"
+    },
+    {
+        "beverage": "Water",
+        "timeItTookToFinishDrink": 20,
+        "price": "$",
+        "date": "3/7",
+        "timeOfDay": 17,
+        "location": "Gym"
+    },
+    {
+        "beverage": "Water",
+        "timeItTookToFinishDrink": 12,
+        "price": "$",
+        "date": "3/7",
+        "timeOfDay": 19,
+        "location": "Home"
+    },
+    {
+        "beverage": "Matcha Expresso",
+        "timeItTookToFinishDrink": 50,
+        "price": "$$",
+        "date": "3/7",
+        "timeOfDay": 20,
+        "location": "Home"
+    },
+    {
+        "beverage": "Green Tea",
+        "timeItTookToFinishDrink": 24,
+        "price": "$",
+        "date": "3/8",
+        "timeOfDay": 16,
+        "location": "Home"
+    }
+]
