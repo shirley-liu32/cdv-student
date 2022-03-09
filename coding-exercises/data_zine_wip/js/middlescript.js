@@ -21,7 +21,7 @@ function gotData(incomingData){
 
     function getBevColor(d, i) {
         let bevColor;
-        if (d.beverage == "Coffee") {
+        if (d.beverage == "Green Tea") {
            bevColor = "#814F0A";
         }
         else if (d.beverage == "Water"){
