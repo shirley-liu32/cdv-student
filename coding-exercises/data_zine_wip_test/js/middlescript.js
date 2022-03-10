@@ -18,7 +18,7 @@ viz.append("svg:image")
 
 viz.append("svg:image")
         .attr('x', 250)
-        .attr('y', 150)
+        .attr('y', 120)
         .attr("xlink:href", "assets/squaretab.png")
 ;
 
@@ -40,7 +40,7 @@ function translateGroup(d, i){
         }    
     }
     else{
-        x = 200 + i * 200 - 2000 ;
+        x = 20 + i * 200 - 2000 ;
         y = 550;
         console.log("second row x is " + x)
     }
@@ -67,13 +67,34 @@ function gotData(incomingData){
     function getBevColor(d, i) {
         let bevColor;
         if (d.beverage == "Green Tea") {
-           bevColor = "green";
+           bevColor = "#D3E1A2";
         }
         else if (d.beverage == "Water"){
-           bevColor = "#30A7D8";
+           bevColor = "#A2CFE1";
         }
-        else{
-            bevColor = "pink";
+        else if (d.beverage == "Dirty Matcha"){
+            bevColor = "#BAE1A2";
+        }
+        else if (d.beverage == "Milk Tea"){
+            bevColor = "#F3D6B0";
+        }
+        else if (d.beverage == "Coffee"){
+            bevColor = "#A9744F";
+        }
+        else if (d.beverage == "Carrot Juice"){
+            bevColor = "#FBB374";
+        }
+        else if (d.beverage == "Protein Shake"){
+            bevColor = "#FFAABA";
+        }
+        else if (d.beverage == "Tequila Sunrise"){
+            bevColor = "#F6A7A1";
+        }
+        else if (d.beverage == "Mango Tea"){
+            bevColor = "#F6C5A1";
+        }
+        else if (d.beverage == "Apple Cider"){
+            bevColor = "#F8E0A2";
         }
         console.log(bevColor)
     
