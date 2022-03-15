@@ -1,7 +1,7 @@
 [
     {
         "beverage": "Water",
-        "timeItTookToFinishDrink": 20,
+        "timeItTookToFinishDrink": 23,
         "price": "$",
         "date": "3/2",
         "timeOfDay": 20,
@@ -49,7 +49,7 @@
     },
     {
         "beverage": "Tequila Sunrise",
-        "timeItTookToFinishDrink": 40,
+        "timeItTookToFinishDrink": 45,
         "price": "$$$",
         "date": "3/5",
         "timeOfDay": 14,
