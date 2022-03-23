@@ -12,12 +12,14 @@ let viz = d3.select("#container")
     .attr("height", h)
 ;
 
+//create svg for key
 let key = d3.select("#key")
   .append("svg")
     .attr("width", w)
     .attr("height", h)
 ;
 
+//information for the key
 key.append("text")
           .text("Asia")
           .attr("x", 1570)
@@ -160,6 +162,7 @@ function gotData(incomingData){
     }
   }
 
+  //function to control changing locations - using the scales
   function getGroupLocation(d, i){
     let x = xScale(d.fert);
     let y = yScale(d.life);
@@ -177,11 +180,12 @@ function gotData(incomingData){
   //   return "translate("+x+", "+y+")"
   // }
 
-
+  //uses population for radius size of circle
   function getPopulation(d,i){
     return rScale(d.pop)*1.5;
   }
 
+  //controls color of circle by continent
   function getColor(d,i){
     let color;
     if(d.continent == "Asia"){
@@ -204,6 +208,8 @@ function gotData(incomingData){
     }
     return color;
   }
+
+//border color of circle
 function getDarkerColor(d,i){
     let color;
     if(d.continent == "Asia"){
@@ -226,24 +232,26 @@ function getDarkerColor(d,i){
     }
     return color;
   }
+
+//get country name
 function getCountry(d,i){
   return d.Country;
 }
 
+//controls country name location when hovering
 function textX(d,i){
   return -rScale(d.pop)*.2;
 }
-
 function textY(d,i){
   return rScale(d.pop)/2.3;
 }
 
+//hides and shows text when hovering
 function mouseOver(d, i) {
   d3.select(this).style("opacity", 1);
 
 }
-
- function mouseOut(d, i) {
+function mouseOut(d, i) {
   d3.select(this).style("opacity", 0)
 }
 
@@ -264,7 +272,7 @@ function mouseOver(d, i) {
     // https://github.com/leoneckert/critical-data-and-visualization-spring-2020/tree/master/labs/lab-6
     // the three steps in the comments below help you to know what to aim for here
 
-
+    //uses to control labeling - d3 knows each data point by name - not numbers
     function assignKeys(d,i){
       return d.Country;
     }
@@ -290,19 +298,19 @@ function mouseOver(d, i) {
       .attr("opacity",".8")
     ;
    
-
+    //hover to see country name
     enteringElements.append("text")
       .text(getCountry)
       .attr("x", textX)
       .attr("y", textY)
       .attr("font-size", ".8em")
-      .style("opacity", "0")
       .style("font-family", "sans-serif")
       .attr("fill","white")
+      .style("opacity", "0")
       .on("mouseover", mouseOver)
       .on("mouseout", mouseOut)
     ;
-    
+
     enteringElements.attr("transform", getIncomingGroupLocation).transition().delay(500).attr("transform", getGroupLocation);
 
     // take care of updating elements
