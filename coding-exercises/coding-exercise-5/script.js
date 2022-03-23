@@ -2,7 +2,7 @@ console.log("hi");
 //data from https://towardsdatascience.com/how-to-build-animated-charts-like-hans-rosling-doing-it-all-in-r-570efc6ba382
 
 let w = 1700;
-let h = 1300;
+let h = 1000;
 let xPadding = 50;
 let yPadding = 50;
 
