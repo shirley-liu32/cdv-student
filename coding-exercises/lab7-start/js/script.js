@@ -201,8 +201,7 @@ function visualizeData(){
   enteringElements = elementsForPage.enter();
   exitingElements = elementsForPage.exit();
   exitingElements.select("rect").attr("fill", ()=>{
-    console.log("red")
-    return "lightblue"
+    return "#add8e6"
   }).transition().delay(500).duration(500).attr("height",0).attr("y",0);
   exitingElements.transition().delay(1000).remove();
   // note, we don't need "let" because the variable elementsForPage already exists
