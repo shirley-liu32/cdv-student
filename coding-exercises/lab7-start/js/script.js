@@ -200,10 +200,9 @@ function visualizeData(){
 
   enteringElements = elementsForPage.enter();
   exitingElements = elementsForPage.exit();
-  exitingElements.select("rect").attr("fill", ()=>{
-    return "#add8e6"
-  }).transition().delay(500).duration(500).attr("height",0).attr("y",0);
-  exitingElements.transition().delay(1000).remove();
+  exitingElements.select("rect")
+    .attr("fill", "#add8e6").transition().delay(500).duration(500).attr("height",0).attr("y",0);
+  exitingElements.transition().delay(500).remove();
   // note, we don't need "let" because the variable elementsForPage already exists
   elementsForPage = graphGroup.selectAll(".datapoint").data(data,assignKeys);
   console.log(elementsForPage);
@@ -249,14 +248,17 @@ function visualizeData(){
     .attr("transform", function (d, i) {
       return "translate(" + xScale(d.key) + "," + (h - padding) + ")";
     });
+
+  
+
   // we aren't done with the updating section yet
   // the width needs to adjust, and even the height (as incoming data points MIGHT
   // set a new maximum value and every other bar goes down a little)
   elementsForPage
     .select("rect")
     .transition()
-    .delay(1000)
-    .duration(200)
+    .delay(500)
+    .duration(500)
     .attr("width", function () {
       return xScale.bandwidth();
     })
@@ -313,6 +315,25 @@ function visualizeData(){
 
 
 
+// function to generate random color https://stackoverflow.com/questions/1484506/random-color-generator
+function randomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+
+
+
+function changeCol(){
+  elementsForPage.select("rect")
+  .attr("fill", randomColor);
+}
+
+
 
 // binding functions to the buttons on the page
 // the functions we use to do the actual work are defined in dataManager.js
@@ -348,6 +369,7 @@ document.getElementById("buttonE").addEventListener("click", shuffleData);
 
 function randomData() {
   document.getElementById("buttonF").querySelector("p").innerHTML = "*Random*";
+  changeCol();
   randomDatapoints();
   visualizeData();
 }

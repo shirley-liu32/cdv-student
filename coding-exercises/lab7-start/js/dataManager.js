@@ -187,8 +187,6 @@ shuffleDatapoints();
 
 function randomDatapoints(){
   shuffleDatapoints();
-  shuffleDatapoints();
-  shuffleDatapoints();
 }
 randomDatapoints();
 
