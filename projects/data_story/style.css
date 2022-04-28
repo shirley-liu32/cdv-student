@@ -24,8 +24,9 @@
     color: rgb(255, 255, 255);
     font-size: 2em;
     text-align: center;
-
+    padding-bottom: 2em;
 }
+
 
 *{
     margin: 0;
@@ -43,6 +44,7 @@ html, body{
 
 #container{
     margin-top: 2em;
+    text-align: center;
 }
 
 h2{
