@@ -1,8 +1,8 @@
-// var audio = new Audio('assets/netflix_intro.mp3');
+var audio = new Audio('assets/netflix_intro.mp3');
 
-// function playSound(){
-//     audio.play();
-// }
+function playSound(){
+    audio.play();
+}
 
 // text reveal on scroll https://www.youtube.com/watch?v=FWQSYONeIqk 
 let listItems = [...document.querySelectorAll('li')];
