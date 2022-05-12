@@ -1,3 +1,8 @@
+// var audio = new Audio('assets/netflix_intro.mp3');
+
+// function playSound(){
+//     audio.play();
+// }
 // IMPORT DATA
 d3.json("data/countries.geojson").then(function(geoData){
     d3.csv("data/netflixTopTen.csv").then(function(incomingData){
@@ -67,6 +72,11 @@ d3.json("data/countries.geojson").then(function(geoData){
         .style("height", h)
         .style("background-color", "black")
     ;
+    let namesBox = d3.select("#names").append("svg")
+        .style("width", 200)
+        .style("height", 100)
+        .style("background-color", "yellow")
+    ;
     let projection = d3.geoOrthographic()
         .translate([w/2,h/2])
         .center([0,0])
@@ -78,6 +88,44 @@ d3.json("data/countries.geojson").then(function(geoData){
     let pathMaker = d3.geoPath(projection);
 
     rotate();
+
+    let mouseOver = function(d) {
+        d3.selectAll(".country")
+          .transition()
+          .duration(200)
+          .style("opacity", .5)
+        d3.select(this)
+          .transition()
+          .duration(200)
+          .style("opacity", 1)
+        ;
+    }
+    //     namesBox.selectAll(".names")
+    //       .data(geoData.features).enter()
+    //       .append("text")
+    //       .text(function(d){
+    //           d.properties.name;
+    //       })
+    //       .attr("fill","red")
+    //       .attr("transform",function(d){                 
+    //           var p = projection(d3.geoCentroid(d));
+    //           return "translate("+p+")";
+    //   })
+    
+    
+
+    let mouseLeave = function(d) {
+        d3.selectAll(".country")
+            .transition()
+            .duration(200)
+            .style("opacity", 1)
+        d3.select(this)
+            .transition()
+            .duration(200)
+            .style("opacity", .5)
+    }
+
+    
 
     viz.selectAll(".country").data(geoData.features).enter()
         .append("path")
@@ -95,8 +143,13 @@ d3.json("data/countries.geojson").then(function(geoData){
                 }
             }            
             )
-            .attr("stroke", "red")
+            .attr("stroke", "#E50914")
+            .on("mouseover", mouseOver)
+            .on("mouseleave", mouseLeave)
     ;
+
+
+
 
     // rotation function from geeksforgeeks: https://www.geeksforgeeks.org/d3-js-geoorthographic-function/
     function rotate(){
@@ -192,7 +245,7 @@ d3.csv("data/globalTop.csv").then(function(globalTopData){
         if (i >= 10){
             topNonEng += i-10+1 + ". " + globalTopData[i].showTitle +  ", " + globalTopData[i].seasonTitle + globalTopData[i].category + "<br><br>";
         }
-        weeklyHrs += globalTopData[i].showTitle + " " + globalTopData[i].weeklyHours + ",";
+        weeklyHrs += globalTopData[i].showTitle + ", " + globalTopData[i].weeklyHours + "<br><br>";
     }
 
     // list for english shows 
@@ -202,6 +255,9 @@ d3.csv("data/globalTop.csv").then(function(globalTopData){
     // number of hours along with title of show
     let separatedHrs = weeklyHrs.split(",");
     console.log(separatedHrs); 
+    
+    let hours = document.getElementById("hours");
+    hours.innerHTML += separatedHrs;
 
 
 })
