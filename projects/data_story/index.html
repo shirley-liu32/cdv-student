@@ -6,40 +6,88 @@
 
     <!-- include the d3 library -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/topojson.v1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
     <link rel="stylesheet" href="style.css">
 
   </head>
   <body onload="playSound()">
     <audio id="intro" src="assets/netflix_intro.mp3" preload="auto"></audio>
-    <h1 id="header">Do You Watch Netflix Or Does Netflix Watch You?</h1>
-    <div id="container">
 
-        <img src="assets/globe.jpeg" alt="globe" width="100%" height="100%">
+    <div id="globeSection" class="reveal">
+      <h1 id="header">Do You Watch Netflix Or Does Netflix Watch You?</h1>
 
+      <div id="container">
+  
+  
+      </div>
+      <p>Netflix operates in 93 countries around the world. </p>
     </div>
 
-    <h2>Netflix is always collecting data on you...</h2>   
+    <div id="netflixWatches">
+      <h2 class="reveal">Netflix is always collecting data on you...</h2>   
     
-    <ul>
-        <li>
-            <span>every screenshot you take</span>
+      <ul>
+          <li class="reveal">
+              every screenshot you take
+          </li>
+          <li class="reveal"> 
+             every time you pause or replay
+          </li>
+          <li class="reveal"> 
+              what device you're watching on
+          </li>
+          <li class="reveal">
+              they're watching your every move
+          </li>
+          <li class="reveal">
+              to build a personalized profile for you
+          </li>
+          <li class="reveal">
+            so you watch what they want you to watch
         </li>
-        <li>
-            <span>every time you pause or replay</span>
-        </li>
-        <li>
-            <span>what device you're watching on</span>
-        </li>
-        <li>
-            <span>they're watching your every move</span>
-        </li>
-        <li>
-            <span>to build a personalized profile for you</span>
-        </li>
+        <li class="reveal">
+          here's what they're feeding you...
+      </li>
+        
+      </ul>
+    </div>
+
+    <hr>
+ 
+
+    <div id="topSection">
+      <h2 class="reveal">Top TV Shows Worldwide</h2>
+      <h3 class="reveal">For the Week of 4/24/22 - 5/1/22</h3>
+      <p class="reveal">Note: The selection of shows for each country varies.</p>
+  
+      <div id="topTitles" class="reveal">
+        <h3 class="reveal">English</h3>
+        <p id="englishList" class="reveal"></p>
+        <h3 class="reveal">Non-English</h3>
+        <p id="nonEnglishList" class="reveal"></p>
+
+      </div>
       
-    </ul>
-    
+    </div>
+    <div id="hoursSection">
+      <h2 class="reveal">Total Hours Spent Watching</h2>
+      <div id="timeViz">
+
+      </div>
+  
+    </div>
+
+    <div id="genreSection" class="reveal">
+      <h2>Genres</h2>  
+      <div id="wordViz">
+      </div>
+      
+    </div>
+  
+
+
  
     <script type="text/javascript" src="script.js"></script>
   </body>
