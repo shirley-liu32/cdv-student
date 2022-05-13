@@ -4,7 +4,7 @@
 
 ![Globe Visualization](assets/netflix.gif)
 
-Big data plays a huge role in today's digital age. Thus, I am exploring the extremely popular streaming service called Netflix and its influence around the world. They collect data on everything from every screenshot you take, every time you hit pause or play, your exact location. This visualization focuses on Netflix's influence on the world and highlights different aspects that make up top TV shows globally.
+Big data plays a huge role in today's digital age. Thus, I am exploring the extremely popular streaming service called Netflix. They collect data on everything from every screenshot you take, every time you hit pause or play, your exact location. This visualization focuses on Netflix's influence on the world and highlights different aspects that make up top TV shows globally.
 
 ## Data Sources
 
