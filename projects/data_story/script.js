@@ -257,7 +257,6 @@ d3.csv("data/globalTop.csv").then(function(globalTopData){
     console.log(separatedHrs); 
     
     let hours = document.getElementById("hours");
-    hours.innerHTML += separatedHrs;
-
+     hours.innerHTML += separatedHrs;
 
 })
